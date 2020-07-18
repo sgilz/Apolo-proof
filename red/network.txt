@@ -1,0 +1,4 @@
+Script started on Fri 17 Jul 2020 04:39:55 PM -05
+]0;vagrant@sgilz:~/red[?1034h[vagrant@sgilz red]$ exit
+
+Script done on Fri 17 Jul 2020 07:09:25 PM -05
