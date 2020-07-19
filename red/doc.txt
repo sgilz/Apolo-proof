@@ -1,0 +1,41 @@
+Punto 1:
+
+Ejecutamos:
+ifconfig para saber cuál es el formato de nuestra IP
+
+$ ifconfig 
+
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::a00:27ff:fe5a:e9e7  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:5a:e9:e7  txqueuelen 1000  (Ethernet)
+        RX packets 449456  bytes 488736471 (466.0 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 128605  bytes 8920399 (8.5 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 0  (Local Loopback)
+        RX packets 12236  bytes 1071124 (1.0 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 12236  bytes 1071124 (1.0 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+tun0: flags=4241<UP,POINTOPOINT,NOARP,MULTICAST>  mtu 1500
+        inet 10.0.0.0  netmask 255.255.255.0  destination 10.0.0.0
+        unspec 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  txqueuelen 500  (UNSPEC)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+Ejecutamos el script host.sh que internamente ejecutará sudo nmap -sP 10.0.2.1-254 buscando los posibles hosts
+y luego imprime la cantidad de host conectados
+
+$ . hosts.sh 10.0.2.1-254
+
+Nmap done: 254 IP addresses (4 hosts up) scanned in 5.07 seconds
+
+La respuesta son 4 HOSTS conectados.

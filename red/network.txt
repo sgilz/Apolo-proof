@@ -1,4 +1,33 @@
-Script started on Fri 17 Jul 2020 04:39:55 PM -05
-]0;vagrant@sgilz:~/red[?1034h[vagrant@sgilz red]$ exit
+Script started on Sat 18 Jul 2020 08:02:10 PM -05
+]0;vagrant@localhost:~/vmprove/red[?1034h[vagrant@sgilz red]$ ifconfig 
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::a00:27ff:fe5a:e9e7  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:5a:e9:e7  txqueuelen 1000  (Ethernet)
+        RX packets 448498  bytes 488664374 (466.0 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 127345  bytes 8827592 (8.4 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
-Script done on Fri 17 Jul 2020 07:09:25 PM -05
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 0  (Local Loopback)
+        RX packets 11218  bytes 982152 (959.1 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 11218  bytes 982152 (959.1 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+tun0: flags=4241<UP,POINTOPOINT,NOARP,MULTICAST>  mtu 1500
+        inet 10.0.0.0  netmask 255.255.255.0  destination 10.0.0.0
+        unspec 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  txqueuelen 500  (UNSPEC)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+]0;vagrant@localhost:~/vmprove/red[vagrant@sgilz red]$ . hosts.sh 10.02.[K[K.2.1-254
+Nmap done: 254 IP addresses (4 hosts up) scanned in 4.06 seconds
+]0;vagrant@localhost:~/vmprove/red[vagrant@sgilz red]$ exit
+
+Script done on Sat 18 Jul 2020 08:03:10 PM -05
