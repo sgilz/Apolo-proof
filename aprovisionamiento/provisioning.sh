@@ -31,8 +31,7 @@ installing_webserver(){
     echo "starting firewalld"
     sudo systemctl start firewalld
     sudo firewall-cmd --permanent --add-service=ssh
-    sudo firewall-cmd --permanent --remove-service=ssh
-    
+    sudo firewall-cmd --zone=public --permanent --add-port=22/tcp
     echo "installing Apache webserver"
     sudo yum update -y httpd
     sudo yum install -y httpd
