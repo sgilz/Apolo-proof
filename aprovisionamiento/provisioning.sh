@@ -72,7 +72,7 @@ fail2ban_config(){
     sudo systemctl status fail2ban
 
     echo "configuring fai2ban for ssh"
-    sudo bash -c 'echo -e "[sshd]\nenabled = true" > /etc/fail2ban/jail.d/10-sshd.conf'
+    sudo bash -c 'echo -e "[sshd]\nenabled = true\nport    = ssh\nfilter   = sshd\nmaxretry = 6" > /etc/fail2ban/jail.d/10-sshd.conf'
     sudo systemctl reload fail2ban
 }
 
